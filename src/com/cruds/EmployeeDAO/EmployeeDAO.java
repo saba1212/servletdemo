@@ -7,6 +7,11 @@ import com.cruds.EmployeeEntity.Employee;
 
 public class EmployeeDAO {
 	
+	private String jdbcURL="jdbc:mysql://localhost:3306/test";
+	private String jdbcUsername="root";
+	private String jdbcpassword="sabarehan";
+	
+	
 	 public int registerEmployee(Employee employee) throws  SQLException, ClassNotFoundException 
 	 {
 	        String INSERT_USERS_SQL = "INSERT INTO employee" +
@@ -17,7 +22,7 @@ public class EmployeeDAO {
 
 	        Class.forName("com.mysql.jdbc.Driver");
 
-	        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees","root","saba");
+	        try (Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcpassword);
 
 	           
 	            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
