@@ -9,7 +9,7 @@
 </head>
 <body>
  <h1>successfully registered!</h1>
- <img src="form-gif.gif" alt="Flowers in Chania" width="100" height="100">
+ 
  
 </body>
 </html>

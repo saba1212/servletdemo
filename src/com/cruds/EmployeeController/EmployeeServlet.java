@@ -15,6 +15,7 @@ import com.cruds.EmployeeEntity.Employee;
 /**
  * Servlet implementation class EmployeeServlet
  */
+
 @WebServlet("/register")
 public class EmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -59,8 +60,12 @@ public class EmployeeServlet extends HttpServlet {
         employee.setAddress(address);
 
         try {
-        	employeedao.registerEmployee(employee);
-        } catch (Exception e) {
+        	
+        	
+        	employeedao.insert(employee);
+        } 
+        
+        catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
